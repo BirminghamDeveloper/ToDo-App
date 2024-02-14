@@ -24,7 +24,10 @@ abstract class TaskDB: RoomDatabase() {
                     context,
                     TaskDB::class.java,
                     "taskdb"
-                ).build()
+                )
+                    .allowMainThreadQueries()
+                    .fallbackToDestructiveMigration()
+                    .build()
             }
             return instance!!
         }
