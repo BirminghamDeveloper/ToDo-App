@@ -1,4 +1,4 @@
-package com.hashinology.todoapp.database.models
+package com.hashinology.todoapp.models
 
 import android.graphics.Bitmap
 import androidx.room.ColumnInfo
@@ -26,7 +26,7 @@ data class TasksModel (
     var isDone: Boolean = false,
     @ColumnInfo()
     var dateTime: String? = null,
-    @Embedded val tableDao: TaskDao
+//    @Embedded val tableDao: TaskDao
     // to ignore attribute and save it in the Cache not Database
 //    @Ignore val pics: Bitmap?
 )
